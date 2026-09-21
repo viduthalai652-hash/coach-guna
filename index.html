@@ -150,7 +150,7 @@
         <!-- About Section -->
         <section id="about" class="relative w-full min-h-screen overflow-hidden bg-black">
             <!-- Full Screen Solid Video Background without scale crop to prevent cutting off right side elements -->
-            <video id="about-video" src="about-video.mp4" class="absolute inset-0 w-full h-full object-cover" muted playsinline loop preload="metadata"></video>
+            <video id="about-video" src="about-video.mp4" class="absolute inset-0 w-full h-full object-cover" autoplay muted playsinline loop preload="auto"></video>
             
             <!-- Logo Eraser Mask (hides Gemini logo smoothly since we removed the zoom crop) -->
             <div class="absolute -bottom-8 -right-8 w-64 h-48 bg-black blur-2xl z-10"></div>
@@ -168,7 +168,7 @@
                 <div class="w-full max-w-5xl mx-auto flex flex-col items-center justify-center transition duration-300 pointer-events-none">
                     <div class="relative w-full aspect-video overflow-hidden rounded-2xl">
                         <!-- Removed scale to ensure the bottom 'IDEA' step is fully visible -->
-                        <video id="trailer-video" src="trailer-video.mp4" class="w-full h-full object-cover filter contrast-150 brightness-90 saturate-150" muted playsinline loop preload="metadata"></video>
+                        <video id="trailer-video" src="trailer-video.mp4" class="w-full h-full object-cover filter contrast-150 brightness-90 saturate-150" autoplay muted playsinline loop preload="auto"></video>
                         
                         <!-- Extra black mask just in case the logo edges bleed -->
                         <div class="absolute bottom-0 right-0 w-32 h-32 bg-black blur-xl z-10"></div>
@@ -197,7 +197,7 @@
                     <div class="flex justify-center mt-12 pt-8 border-t border-faint pointer-events-none">
                         <!-- Wrapper to effectively crop the video and hide the watermark -->
                         <div class="w-64 md:w-80 rounded-lg shadow-2xl animate-float overflow-hidden relative">
-                            <video id="book-video" src="book-video.mp4" class="w-full h-full object-cover scale-[1.15] translate-x-[2%] translate-y-[2%] filter contrast-150 brightness-90 saturate-150" muted playsinline loop preload="auto"></video>
+                            <video id="book-video" src="book-video.mp4" class="w-full h-full object-cover scale-[1.15] translate-x-[2%] translate-y-[2%] filter contrast-150 brightness-90 saturate-150" autoplay muted playsinline loop preload="auto"></video>
                         </div>
                     </div>
                 </div>
