@@ -379,20 +379,23 @@
             });
         });
 
-        // Play videos when scrolling into view
-        const videosToTrigger = ["book-video", "trailer-video"];
-        
-        videosToTrigger.forEach(id => {
+        // Play videos only when in view (Native IntersectionObserver for better mobile performance)
+        const videoObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                const vid = entry.target;
+                if (entry.isIntersecting) {
+                    vid.play().catch(() => {}); // Catch autoplay policy errors silently
+                } else {
+                    vid.pause();
+                }
+            });
+        }, { threshold: 0.1 });
+
+        const videosToManage = ["book-video", "trailer-video", "about-video"];
+        videosToManage.forEach(id => {
             const vid = document.getElementById(id);
             if (vid) {
-                ScrollTrigger.create({
-                    trigger: vid,
-                    start: "top 90%",
-                    onEnter: () => vid.play(),
-                    onLeave: () => vid.pause(),
-                    onEnterBack: () => vid.play(),
-                    onLeaveBack: () => vid.pause()
-                });
+                videoObserver.observe(vid);
             }
         });
     </script>
