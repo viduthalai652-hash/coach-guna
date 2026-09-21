@@ -148,9 +148,12 @@
         </section>
 
         <!-- About Section -->
-        <section id="about" class="relative w-full min-h-screen overflow-hidden bg-black section-anim">
-            <!-- Full Screen Solid Video Background -->
-            <video id="about-video" src="about-video.mp4" class="absolute inset-0 w-full h-full object-cover origin-top scale-[1.12]" muted playsinline loop preload="metadata"></video>
+        <section id="about" class="relative w-full min-h-screen overflow-hidden bg-black">
+            <!-- Full Screen Solid Video Background without scale crop to prevent cutting off right side elements -->
+            <video id="about-video" src="about-video.mp4" class="absolute inset-0 w-full h-full object-cover" muted playsinline loop preload="metadata"></video>
+            
+            <!-- Logo Eraser Mask (hides Gemini logo smoothly since we removed the zoom crop) -->
+            <div class="absolute -bottom-8 -right-8 w-64 h-48 bg-black blur-2xl z-10"></div>
         </section>
 
         <!-- Trailer Section -->
