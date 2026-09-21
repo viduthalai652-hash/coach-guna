@@ -188,8 +188,8 @@
                 <!-- Video Player (Holographic effect) -->
                 <div class="w-full max-w-5xl mx-auto flex flex-col items-center justify-center transition duration-300 pointer-events-none">
                     <div class="relative w-full aspect-video overflow-hidden rounded-2xl">
-                        <!-- Scale the video to completely push the Gemini logo off-screen -->
-                        <video id="trailer-video" src="trailer-video.mp4" class="w-full h-full object-cover origin-top scale-[1.12] filter contrast-150 brightness-90 saturate-150" muted playsinline loop preload="metadata"></video>
+                        <!-- Removed scale to ensure the bottom 'IDEA' step is fully visible -->
+                        <video id="trailer-video" src="trailer-video.mp4" class="w-full h-full object-cover filter contrast-150 brightness-90 saturate-150" muted playsinline loop preload="metadata"></video>
                         
                         <!-- Extra black mask just in case the logo edges bleed -->
                         <div class="absolute bottom-0 right-0 w-32 h-32 bg-black blur-xl z-10"></div>
